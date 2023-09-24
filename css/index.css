@@ -1,0 +1,196 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  html, body{
+    height: 100%;
+  }
+  main{
+    height: 100%;
+  }
+
+  header {
+  min-height: 150px;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  color: white;
+  position: relative;
+  background: url('../media/header.webp') no-repeat center center;
+  background-size: 100% auto;
+  padding: 0;
+  margin: 0;
+}
+
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  /* background-size: 100% auto; */
+  background-color: rgba(0, 0, 0, 0.372);
+}
+
+header h1 {
+  position: absolute;
+  z-index: 1; /* Asegura que el texto esté encima de la capa oscura */
+  text-align: center; /* Centra el texto horizontalmente */
+  font-size: 50px; /* Ajusta el tamaño de fuente según tus necesidades */
+  /* Otras propiedades de estilo del texto */
+  font-weight: 400;
+}
+
+.noo{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main{
+  width: 80vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main h1{
+  font-size: 50px;
+}
+
+main p{
+  font-size: 50px;
+  font-weight: 200;
+}
+
+header{
+  width: 100%;
+}
+
+.footer{
+  width: 100%;
+}
+
+
+.home{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(70, 91, 105);
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-left: 10%;
+}
+
+.info_text_1{
+  font-family: var(--Open-Sans);
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+}
+
+.info_text_2{
+  font-family: var(--PT-Sans);
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.info_text_3{
+  font-family: var(--Open-Sans);
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+  letter-spacing: .2rem;
+}
+
+.info_text_4{
+  font-family: var(--Open-Sans);
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.753);
+  margin-right: 50px;
+}
+
+.contact_button{
+  font-family: var(--Open-Sans);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.942);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+  border-radius: 5rem;
+  padding: 20px 30px;     
+  /* margin: 25px 10px 0 0; */
+  width: 200px;
+}
+ 
+.contact_button{
+  background-color: #0059a6;
+  border: none;
+}
+
+.contact_button:hover{
+  cursor: pointer;
+  transform: scale(1.10);
+  transition: 0.9s;
+}
+
+.aruduinoLogoSmall{
+  margin-bottom: 12px;
+  display: none;
+}
+
+
+@media all and (max-width:640px) {
+
+  .info_text_2{
+    font-size: 2.2rem;
+  }
+
+  .info_text_3{
+    font-size: 0.7rem;
+  }
+
+  .info_text_4{
+    font-size: 0.7rem;
+  }
+
+}
+
+@media all and (max-width:1361px) {
+
+  .container_image{
+    display: none;
+  }
+
+  .aruduinoLogoSmall{
+    display: inline-block;
+  }
+
+}
+      
+
+@media all and (max-width:500px) {
+
+  main{
+    padding: 25rem 0;
+  }
+
+}
